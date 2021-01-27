@@ -1,0 +1,11 @@
+* nvm install --lts //v14.15.4
+* nvm us --lts //v14.15.4
+
+* npm i -g @vue/cli
+* vue --version //@vue/cli@4.5.11
+* npm i -g @vue/cli-init //2.x Template 가져오기
+
+
+
+
+
