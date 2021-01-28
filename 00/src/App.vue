@@ -3,12 +3,16 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="어떻게 이렇게 바뀌지?"/>
     <A2 url="http://www.naver.com">네이버</A2>
+    <hr/>
+    <input type="text" v-model="title" />
+    <div>{{title2}}</div>
+    <hr/>
     <button id="show-modal" @click="showModal = true">Show Modal</button>
     <Modal v-if="showModal" @close="showModal = false">
       <div slot="body">dsfdsfsdf<br/> dsfdsfdsf<br/> dsfdsfsdfsdfdsfdsfdsf</div>
       <h1 slot="header">{{title}}</h1>
     </Modal>
-    <input type="text" v-model="title" />
+    
   </div>
 </template>
 
@@ -28,6 +32,11 @@ export default {
     return {
       title: '',
       showModal : false
+    }
+  },
+  computed: {
+    title2:function(){
+      return this.title+'원'
     }
   }
 }
